@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Roblox Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0a0a0a;
+      color: #f22;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(to bottom, #111, #0a0a0a);
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #ff2222;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #ff2222;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .project-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .project-card {
+      background-color: #1a1a1a;
+      border: 1px solid #ff0000;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-card .content {
+      padding: 1rem;
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: #f55;
+    }
+    .contact {
+      text-align: center;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #f55;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YourNameHere</h1>
+    <p>Roblox Scripter / Game Developer</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Write a short description here about who you are, what you specialize in (e.g., FPS systems, UI, animations, etc.), and your experience.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="your-image-link.jpg" alt="Project Image" />
+        <div class="content">
+          <h3>Project Name</h3>
+          <p>Description of what you did on this project. Mention scripting, UI, AI, etc.</p>
+          <a href="https://www.roblox.com/games/">View Game</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Discord: YourDiscordTag#1234</p>
+      <p>Email: you@example.com</p>
+      <p>Status: <strong>Commissions Open</strong></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 YourNameHere. Built with ❤️ for Roblox work.</p>
+  </footer>
+</body>
+</html>
