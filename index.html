@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=https://guns.lol/dreamxy" />
-  <title>Redirecting...</title>
+<meta charset="UTF-8">
+<title>Video Background Scroll Fade</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.content {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+.content h1 {
+  font-size: 3rem;
+}
+.content p {
+  font-size: 1.2rem;
+}
+.after-content {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+}
+</style>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="https://example.com">click here</a>.</p>
+
+<video id="video-background" autoplay muted loop>
+  <source src="background.mp4" type="video/mp4">
+</video>
+
+<div id="content" class="content">
+  <h1>Dreamy</h1>
+  <p>Programmer | 100M+ Contributed</p>
+</div>
+
+<div class="after-content">
+  <h2>More About Me</h2>
+  <p>This appears after you scroll down, as the top content fades out.<br/>
+    Add more text, links, and any other elements you want here.
+  </p>
+</div>
+
+<script>
+window.addEventListener('scroll', function() {
+  const scrollY = window.scrollY;
+  const content = document.getElementById('content');
+  const opacity = Math.max(1 - scrollY / window.innerHeight, 0);
+  content.style.opacity = opacity;
+});
+</script>
 </body>
 </html>
+
